@@ -1,0 +1,2 @@
+import { Router } from 'express'; import { listUsers,stats,exportSheet } from '../controllers/user.controller.js'; import { requireAuth } from '../middleware/auth.js'; import { requireAdmin } from '../middleware/admin-only.js';
+const router=Router(); router.get('/',requireAuth,requireAdmin,listUsers); router.get('/stats',requireAuth,requireAdmin,stats); router.get('/export/:type',requireAuth,requireAdmin,exportSheet); export default router;

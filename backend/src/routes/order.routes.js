@@ -1,0 +1,2 @@
+import { Router } from 'express'; import { create,myOrders,allOrders,status } from '../controllers/order.controller.js'; import { requireAuth } from '../middleware/auth.js'; import { requireAdmin } from '../middleware/admin-only.js';
+const router=Router(); router.post('/',create); router.get('/my',requireAuth,myOrders); router.get('/',requireAuth,requireAdmin,allOrders); router.put('/:id/status',requireAuth,requireAdmin,status); export default router;

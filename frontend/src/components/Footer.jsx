@@ -1,0 +1,1 @@
+export default function Footer(){return <footer><div><strong>M3NACE.</strong><span>Objects for a louder everyday.</span></div><small>© {new Date().getFullYear()} M3NACE Store · Built for the bold</small></footer>}

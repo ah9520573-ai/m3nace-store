@@ -1,0 +1,4 @@
+import { readRows, filePath, files } from '../services/spreadsheet.service.js';
+export async function listUsers(req,res){res.json({success:true,users:(await readRows('users')).map(({passwordHash,...u})=>u)});}
+export async function stats(req,res){const [products,orders,users]=await Promise.all([readRows('products'),readRows('orders'),readRows('users')]); res.json({success:true,stats:{products:products.length,orders:orders.length,users:users.filter(u=>u.role==='user').length,revenue:orders.filter(o=>o.status!=='Cancelled').reduce((s,o)=>s+Number(o.totalAmount||0),0),lowStock:products.filter(p=>Number(p.stock)<=5)}});}
+export async function exportSheet(req,res){if(!files[req.params.type])return res.status(404).json({success:false,message:'Unknown spreadsheet'});res.download(filePath(req.params.type),files[req.params.type]);}

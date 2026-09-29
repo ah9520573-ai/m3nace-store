@@ -1,0 +1,87 @@
+:root {
+  --dark-bg: #0d1712;
+  --dark-surface: #17251d;
+  --dark-surface-alt: #203329;
+  --dark-text: #f4faf5;
+  --dark-muted: #c1d1c5;
+  --dark-line: #486052;
+}
+
+.app:not(.light) .section,
+.app:not(.light) .page-heading,
+.app:not(.light) .detail-copy,
+.app:not(.light) .hero h1,
+.app:not(.light) .admin-form,
+.app:not(.light) .auth-page,
+.app:not(.light) .success-page {
+  color: var(--dark-text);
+}
+
+.app:not(.light) .hero h1 em {
+  color: var(--dark-text);
+  text-shadow: none;
+}
+
+.app:not(.light) .brand-mark {
+  color: #f2c14e;
+  text-shadow: 0 0 6px #f2c14e99, 0 0 16px #f2c14e66;
+}
+
+.app:not(.light) .product-card,
+.app:not(.light) .product-admin-card,
+.app:not(.light) .summary,
+.app:not(.light) .auth-card,
+.app:not(.light) .admin-grid section,
+.app:not(.light) .stats > div,
+.app:not(.light) .order-modal {
+  background: var(--dark-surface);
+  border-color: var(--dark-line);
+  color: var(--dark-text);
+}
+
+.app:not(.light) input,
+.app:not(.light) textarea,
+.app:not(.light) select,
+.app:not(.light) .filters input,
+.app:not(.light) .filters select {
+  background: var(--dark-surface-alt);
+  border-color: var(--dark-line);
+  color: var(--dark-text);
+}
+
+.app:not(.light) input::placeholder,
+.app:not(.light) textarea::placeholder,
+.app:not(.light) .lead,
+.app:not(.light) .description,
+.app:not(.light) .hint,
+.app:not(.light) .summary p,
+.app:not(.light) .order p,
+.app:not(.light) .product-admin-card p,
+.app:not(.light) .order-hint {
+  color: var(--dark-muted);
+}
+
+.app:not(.light) .product-meta strong,
+.app:not(.light) .price,
+.app:not(.light) .stats b,
+.app:not(.light) .order-detail-grid strong,
+.app:not(.light) .modal-total strong {
+  color: #8fe0aa;
+}
+
+.app:not(.light) .product-meta h3,
+.app:not(.light) .summary h2,
+.app:not(.light) .summary .grand,
+.app:not(.light) .order-detail-items,
+.app:not(.light) .modal-total,
+.app:not(.light) .auth-card h1,
+.app:not(.light) .page-heading h1,
+.app:not(.light) .section h1,
+.app:not(.light) .section h2,
+.app:not(.light) .section h3 {
+  color: var(--dark-text);
+}
+
+.app:not(.light) .order-modal-backdrop { background: #000b; }
+.app:not(.light) .order-detail-grid small { color: var(--dark-muted); }
+.app:not(.light) .modal-close { color: var(--dark-text); }

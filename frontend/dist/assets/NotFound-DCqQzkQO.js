@@ -1,0 +1,1 @@
+import{j as e,L as s}from"./index-4yqs80ve.js";function t(){return e.jsxs("main",{className:"empty page-404",children:[e.jsx("p",{className:"eyebrow",children:"404"}),e.jsx("h1",{children:"Wrong turn."}),e.jsx("p",{children:"That page does not exist in this collection."}),e.jsx(s,{className:"button",to:"/",children:"Return home"})]})}export{t as default};
