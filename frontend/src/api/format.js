@@ -1,3 +1,3 @@
-import { API_URL } from './client';
-export const mediaUrl = value => value ? (value.startsWith('http') ? value : `${API_URL.replace(/\/api\/?$/, '')}${value}`) : '';
+import { BACKEND_ORIGIN } from './client';
+export const mediaUrl = value => value ? (/^(https?:|data:|blob:)/i.test(value) ? value : `${BACKEND_ORIGIN}${value}`) : '';
 export const formatPKR = value => `Rs. ${Number(value || 0).toLocaleString('en-PK', { maximumFractionDigits: 0 })}`;

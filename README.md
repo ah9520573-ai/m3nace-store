@@ -24,7 +24,13 @@ npm run dev
 
 Open the Vite URL printed in the terminal. The backend creates `backend/data/products.xlsx`, `users.xlsx`, and `orders.xlsx` on its first start, and also creates the `uploads` directory.
 
-Default admin: `ahmad@gmail.com` / `ahmad123`.
+The admin account is created or updated from `ADMIN_EMAIL` and `ADMIN_PASSWORD` in the backend environment.
+
+## Deploying on Render
+
+For the backend Web Service, set `JWT_SECRET`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `CLIENT_URL=https://m3nace-store-frontend.onrender.com`, `NODE_ENV=production`, `DATA_DIR`, and `UPLOAD_DIR`. Point `DATA_DIR` and `UPLOAD_DIR` at directories on the mounted persistent disk.
+
+For the frontend Web Service, set `VITE_API_URL=https://m3nace-store.onrender.com/api` and run `vite preview`.
 
 ## API
 

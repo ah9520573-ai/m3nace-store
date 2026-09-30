@@ -1,9 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import XLSX from 'xlsx';
+import { env } from '../config/env.js';
 
 const locks = new Map();
-const dataDir = path.resolve('data');
+const dataDir = path.resolve(env.dataDir);
 const files = { products: 'products.xlsx', users: 'users.xlsx', orders: 'orders.xlsx' };
 const headers = {
   products: ['id','name','description','price','stock','imageUrls','videoUrl','category','createdAt','updatedAt'],
